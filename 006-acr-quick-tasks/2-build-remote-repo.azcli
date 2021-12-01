@@ -2,4 +2,4 @@
 az acr build -r unleashed https://github.com/ThorstenHans/acr-tasks.git#master:acr-quick-task-1
 
 # build and push 
-az acr build -r unleashed https://github.com/ThorstenHans/acr-tasks.git#master:acr-quick-task-1 -i my-image:{{.Run.ID}}
+az acr build -r unleashed https://github.com/ThorstenHans/acr-tasks.git#master:acr-quick-task-1 --image nginx:{{.Run.ID}}
