@@ -1,0 +1,3 @@
+# update a geo replication (accept write ops in india)
+az acr replication update -n unleashedindia -g rg-unleashed -r unleashed --region-endpoint-enabled true
+

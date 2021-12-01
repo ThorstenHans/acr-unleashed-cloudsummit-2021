@@ -1,0 +1,3 @@
+# List all geo replications
+az acr replication list -r unleashed -g rg-unleashed
+

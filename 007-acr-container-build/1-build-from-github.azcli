@@ -1,0 +1,12 @@
+# GRAB a Personal Access Token from GitHub (PAT) -> https://github.com/settings/tokens/new
+PAT=<YOUR_PAT>
+
+# Create a task
+az acr task create -r unleashed -n on-code-push --context https://github.com/ThorstenHans/acr-build-helloworld-node.git --file Dockerfile --image hello-world:{{.Run.ID}} --git-access-token $GH_PAT
+
+# commit some changes and push
+
+az acr task list-runs -r unleashed -g rg-unleashed -n on-code-push
+
+
+az acr task create -t hello-world:{{.Run.ID}} -n hello-world -r unleashed  -f Dockerfile --no-push true --auth-mode None -c https://github.com/Azure-Samples/acr-build-helloworld-node.git --pull-request-trigger-enabled true --git-access-token $GH_PAT

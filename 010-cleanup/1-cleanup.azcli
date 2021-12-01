@@ -1,0 +1,2 @@
+# Delete Resource Group
+az group delete -n rg-unleashed --no-wait

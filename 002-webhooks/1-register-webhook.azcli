@@ -1,0 +1,6 @@
+# register webhook
+az acr webhook create --actions push --name on-push --registry unleashed -g rg-unleashed  --uri https://fnapp-unleashed.azurewebsites.net/api/receiver
+
+# register webhook for multiple actions
+az acr webhook create --actions push delete --name on-push-and-delete --registry unleashed -g rg-unleashed  --uri https://fnapp-unleashed.azurewebsites.net/api/receiver
+

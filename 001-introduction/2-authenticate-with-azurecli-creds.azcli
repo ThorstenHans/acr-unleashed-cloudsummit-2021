@@ -1,0 +1,5 @@
+# Authenticate with current Azure CLI credentials
+az acr login -n unleashed
+
+# Alternative: Login with custom user
+# az acr login -n unleashed -u john.doe@contoso.com

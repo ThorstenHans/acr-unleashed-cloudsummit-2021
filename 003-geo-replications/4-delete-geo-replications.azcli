@@ -1,0 +1,5 @@
+# Delete a geo replication
+az acr replication delete -n unleashedeastus2 -r unleashed -g rg-unleashed
+# Delete a geo replication
+az acr replication delete -n unleashedindia -r unleashed -g rg-unleashed
+

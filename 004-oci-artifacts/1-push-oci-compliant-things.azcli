@@ -1,0 +1,8 @@
+# ensure authentication
+az acr login -n unleashed
+
+# The following command assumes that you've already build the sample application for wasm32-wasi
+# see ./sample/Makefile
+
+# push OCI artifact to ACR
+wasm-to-oci push ./sample/target/wasm32-wasi/release/hello-wasm.wasm unleashed.azurecr.io/hello-wasm:latest

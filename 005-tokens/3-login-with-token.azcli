@@ -1,0 +1,10 @@
+# Set Token Name 
+name=SampleToken
+
+# login -> will ask for password using interactive input
+az acr login -n unleashed -u $name
+
+# on a CI system you can set it using a secret or similar concept
+# here TOKEN_CREDENTIAL is an environment variable
+az acr login -n unleashed -u $name -p $TOKEN_CREDENTIAL
+

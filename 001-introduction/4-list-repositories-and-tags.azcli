@@ -1,0 +1,8 @@
+# ensure authentication
+az acr login -n unleashed
+
+# list all repositories (images) in ACR
+az acr repository list -n unleashed
+
+# list all tags of a certain repository
+az acr repository show-tags -n unleashed --repository nginx

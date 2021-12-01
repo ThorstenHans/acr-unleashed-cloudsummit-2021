@@ -1,0 +1,2 @@
+# Build and publish from local context with no docker installation at all
+az acr build -r unleashed --image ubuntu:0.0.1 .

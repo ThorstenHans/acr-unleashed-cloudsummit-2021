@@ -1,0 +1,5 @@
+# Create a geo replication which accepts write ops
+az acr replication create -r unleashed --location eastus2 -n unleashedeastus2 -g rg-unleashed --region-endpoint-enabled true
+
+# Create a geo replication (replication only)
+az acr replication create -r unleashed --location india -n unleashedindia -g rg-unleashed --region-endpoint-enabled false

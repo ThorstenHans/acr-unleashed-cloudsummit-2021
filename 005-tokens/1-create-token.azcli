@@ -1,0 +1,7 @@
+# create a scope map
+az acr scope-map create -n scope-read-everything -r unleashed -g rg-unleashed --repository content/read metadata/read
+
+# create a token
+az acr token create -n SampleToken -r unleashed -g rg-unleashed --no-passwords true --scope-map scope-read-everything
+
+az acr token list -r unleashed -g rg-unleashed

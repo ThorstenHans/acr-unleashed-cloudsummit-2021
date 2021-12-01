@@ -1,0 +1,7 @@
+# ensure authentication
+az acr login -n unleashed
+
+docker pull nginx:alpine
+docker tag nginx:alpine unleashed.azurecr.io/nginx:alpine
+
+docker push unleashed.azurecr.io/nginx:alpine

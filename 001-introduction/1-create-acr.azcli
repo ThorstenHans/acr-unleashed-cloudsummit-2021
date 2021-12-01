@@ -1,0 +1,5 @@
+# Create a Resource Group
+az group create -n rg-unleashed -l germanywestcentral
+
+# Create an ACR instance
+az acr create -n unleashed -g rg-unleashed -l germanywestcentral --sku Premium
